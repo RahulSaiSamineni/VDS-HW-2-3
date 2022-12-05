@@ -1,2 +1,2 @@
-# VDS-HW-2-3
-Data Visualizations HomeWorks 2 and 3
+# VDS-HW3
+Data Visualizations HomeWorks 3
