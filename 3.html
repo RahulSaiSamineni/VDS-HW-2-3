@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+
+    <title>Flow Visualization</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/particleSystem.js"></script>
+    <script src="js/main.js"></script>
+
+
+</head>
+
+<body style="background-color:#dadaeb" onload="App.start()">
+
+    <center>
+    <div>
+        <h2>Flow Visualization using Three.js</h2><br><br>
+    </div>
+    </center>
+    <div class="col-1">
+        <div class="particles col-lg-6">
+            <div id="scene"></div><br>
+            <div class="slider_pos">
+                <div class="particles col-md-8" id="zSlider"></div><br>
+                <h5><text id="tooltip" text="Zvalue"> </text></h><br>
+                <button id="resetbutton" class="btn btn-success">Reset</button>
+            </div>    
+        </div>
+    </div><br><br>
+    <div class="col-2">
+        <div class="plane col-lg-6"></div>
+        <div class="legend col-lg-6">
+            <div class='legend-title'>Concentration</div>
+            <div class='legend-scale'>
+                <ul class='legend-labels'>
+                    <li><span style='background:#F1EFF6;'></span>  20</li>
+                    <li><span style='background:#E2E1EF;'></span>  50</li>
+                    <li><span style='background:#CECEE5;'></span>  100</li>
+                    <li><span style='background:#AAA8D0;'></span>  150</li>
+                    <li><span style='background:#8782BC;'></span>  200</li>
+                    <li><span style='background:#6E58A7;'></span>  250</li>
+                    <li><span style='background:#552990;'></span>  300</li>
+                    <li><span style='background:#3F007D;'></span>  360</li>
+                </ul>
+            </div><br><br><br><br>
+        </div>    
+    </div>
+    <div class="col-3">
+        <h3>Instructions:</h3>
+        <ul>
+            <li>Cylinder can be moved and rotated using normal mouse pointer.</li>
+            <li>Use the slider to move the plane filter and the z-value will be populated once you start moving the slider.</li>
+            <li>Using the z-value from the slider, you can view the points present in the rectangle plane in cyclinder in side 2D view.</li>
+            <li>Once you start moving slider, you can see brusing applied and cylinder turns to gray.</li>
+            <li>Added Reset Button to Reset the z-value in cyclinder and color will be back as interpolated Purples.</li>
+        </ul>
+    </div>
+    <div class="col-4">
+        <h3>References:</h3>
+        <ul>
+            <li><a href="https://threejs.org/docs/#api/en/math/Cylindrical" target="_blank">threejs.org</a></li>
+            <li><a href="https://github.com/uic-evl/cs529-vds" target="_blank">HW3 start up code</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dLYMzNmILQA" target="_blank"> Particle Systems</a></li>
+            <li><a href="https://github.com/d3/d3-scale-chromatic">Sequential Scales</a></li>
+            <li><a href="https://www.geeksforgeeks.org/d3-js-interpolatepurples-function/">d3 Geeks for Geeks</a></li>
+            <li><a href="https://www.youtube.com/watch?v=hJ2-OGHW8AA">Legend</a></li>
+        </ul>
+    </div>
+</body>
+</html>
